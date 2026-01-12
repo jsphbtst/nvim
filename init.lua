@@ -110,6 +110,32 @@ require("lazy").setup({
     end,
   },
 
+  -- Treesitter (syntax highlighting)
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+      require("nvim-treesitter.configs").setup({
+        ensure_installed = {
+          "javascript",
+          "typescript",
+          "tsx",
+          "lua",
+          "go",
+          "json",
+          "html",
+          "css",
+          "markdown",
+          "bash",
+          "vim",
+          "vimdoc",
+        },
+        highlight = { enable = true },
+        indent = { enable = true },
+      })
+    end,
+  },
+
   -- Formatter
   {
     "stevearc/conform.nvim",
