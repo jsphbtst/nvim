@@ -145,6 +145,15 @@ require("lazy").setup({
     end,
   },
 
+  -- Todo comments
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("todo-comments").setup()
+    end,
+  },
+
   -- Formatter
   {
     "stevearc/conform.nvim",
@@ -360,3 +369,4 @@ keymap("n", "<leader>ff", builtin.find_files)
 keymap("n", "<leader>fg", builtin.live_grep)
 keymap("n", "<leader>fb", builtin.buffers)
 keymap("n", "<leader>fh", builtin.help_tags)
+keymap("n", "<leader>ft", "<cmd>TodoTelescope<CR>")
