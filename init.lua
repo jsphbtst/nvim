@@ -154,6 +154,21 @@ require("lazy").setup({
     end,
   },
 
+  -- Which-key (keybinding popup)
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    config = function()
+      local wk = require("which-key")
+      wk.setup()
+      wk.add({
+        { "<leader>f", group = "Find" },
+        { "<leader>g", group = "Git" },
+        { "<leader>c", group = "Code" },
+      })
+    end,
+  },
+
   -- Formatter
   {
     "stevearc/conform.nvim",
