@@ -385,3 +385,10 @@ keymap("n", "<leader>fg", builtin.live_grep)
 keymap("n", "<leader>fb", builtin.buffers)
 keymap("n", "<leader>fh", builtin.help_tags)
 keymap("n", "<leader>ft", "<cmd>TodoTelescope<CR>")
+
+-- Copy relative file path to clipboard
+keymap("n", "<leader>cp", function()
+  local path = vim.fn.expand("%:.")
+  vim.fn.setreg("+", path)
+  vim.notify("Copied: " .. path, vim.log.levels.INFO)
+end, { desc = "Copy relative path" })
