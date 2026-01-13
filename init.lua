@@ -385,6 +385,7 @@ keymap("n", "<leader>fg", builtin.live_grep)
 keymap("n", "<leader>fb", builtin.buffers)
 keymap("n", "<leader>fh", builtin.help_tags)
 keymap("n", "<leader>ft", "<cmd>TodoTelescope<CR>")
+keymap("n", "<leader>fs", builtin.current_buffer_fuzzy_find, { desc = "Search in file" })
 
 -- Copy relative file path to clipboard
 keymap("n", "<leader>cp", function()
