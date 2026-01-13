@@ -143,6 +143,7 @@ require("lazy").setup({
 					"bash",
 					"vim",
 					"vimdoc",
+					"python",
 				},
 				highlight = { enable = true },
 				indent = { enable = true },
@@ -236,6 +237,7 @@ require("lazy").setup({
 					"jsonls",
 					"html",
 					"cssls",
+					"pyright",
 				},
 			})
 
@@ -308,7 +310,7 @@ require("lazy").setup({
 
 			-- Setup each LSP server
 			local lspconfig = require("lspconfig")
-			local servers = { "ts_ls", "gopls", "jsonls", "html", "cssls" }
+			local servers = { "ts_ls", "gopls", "jsonls", "html", "cssls", "pyright" }
 
 			for _, server in ipairs(servers) do
 				lspconfig[server].setup({ capabilities = capabilities })
