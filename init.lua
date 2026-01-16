@@ -70,7 +70,7 @@ require("lazy").setup({
 			vim.g.loaded_netrwPlugin = 1
 			require("nvim-tree").setup({
 				view = {
-					width = 25,
+					width = 30,
 				},
 				git = {
 					enable = true,
@@ -192,11 +192,11 @@ require("lazy").setup({
 		config = function()
 			require("conform").setup({
 				formatters_by_ft = {
-					javascript = { "prettier" },
-					typescript = { "prettier" },
-					javascriptreact = { "prettier" },
-					typescriptreact = { "prettier" },
-					json = { "prettier" },
+					javascript = { "biome", "prettier", stop_after_first = true },
+					typescript = { "biome", "prettier", stop_after_first = true },
+					javascriptreact = { "biome", "prettier", stop_after_first = true },
+					typescriptreact = { "biome", "prettier", stop_after_first = true },
+					json = { "biome", "prettier", stop_after_first = true },
 					html = { "prettier" },
 					css = { "prettier" },
 					markdown = { "prettier" },
