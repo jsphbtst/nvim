@@ -327,6 +327,19 @@ require("lazy").setup({
 					},
 				},
 			})
+
+			-- Diagnostic display config
+			vim.diagnostic.config({
+				virtual_text = {
+					prefix = "●",
+					source = "if_many",
+				},
+				float = {
+					source = true,
+				},
+				severity_sort = true,
+				update_in_insert = false,
+			})
 		end,
 	},
 })
